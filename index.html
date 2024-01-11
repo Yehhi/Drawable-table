@@ -1,0 +1,67 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Plate Number</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    {'name':'Ms Helen', 'phone':'07084963641', 'pn':''},
+	    {'name':'Mr Friday', 'phone':'08039256948', 'pn':'Eky-778DM'},
+	    {'name':'Ms Oris', 'phone':'08121484495', 'pn':'FKJ-510HW'},
+	    {'name':'Mr Ademola', 'phone':'08060004810', 'pn':'Epe-34GW'},
+	    {'name':'', 'phone':'08060239100', 'pn':'LND-82HH'},
+	    {'name':'', 'phone':'08132517649', 'pn':'Jjj-159HX'},
+	    {'name':'Mr Tunji', 'phone':'08037260793', 'pn':'lsd-465hk'},
+	    {'name':'MS Taiwo', 'phone':'07069054694', 'pn':'Epe-532fa'},
+	    {'name':'', 'phone':'07031723554', 'pn':'LND-21jh'},
+	    {'name':'Mr Micheal', 'phone':'07069276208', 'pn':'Kwl-121ar'},
+	   {'name':'Ms Clare', 'phone':'08152249420', 'pn':'AGL-113ht'},
+/*	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},
+	   {'name':'', 'phone':'', 'pn':''},*/
+	   /*https://youtube.com/@DennisIvy?si=sUSe2zPXoKgBQLvD*/
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].phone}</td>
+							<td>${data[i].pn}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
